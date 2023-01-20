@@ -25,7 +25,7 @@ def getTree():
   return tree
   
 ## print dictionary with filepath and contents
-def printTree(display_path=False, group_files=True, hide_empty_folders=False):
+def printTree(display_path=True, group_files=True, hide_empty_folders=False):
   current_tree=getTree()
   print("\nPrint Options:\ndisplay_path= {}\ngroup_files= {}\nhide_empty_folders= {}\n".format(display_path,group_files,hide_empty_folders))
   for foldername,files in current_tree.items():
@@ -40,7 +40,7 @@ def printTree(display_path=False, group_files=True, hide_empty_folders=False):
       
     if len(files)>0:
       if(group_files):
-        print("\t{}\n".format(files))
+        print("\tfiles: {}\n".format(files))
       else:
         for x in range(0,len(files)):
           print("\t{}".format(files[x]))
