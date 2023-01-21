@@ -1,0 +1,5 @@
+---
+applications:
+ - name: FLASK_EngToFrn_Translator
+   random-random: true
+   memory: 64M
